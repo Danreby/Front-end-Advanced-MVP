@@ -3,11 +3,7 @@ import { useEffect } from "react";
 export const MobileMenu = ({ menuOpen, setMenuOpen, setLanguage, language }) => {
 
   const handleScroll = (event, sectionId) => {
-    event.preventDefault();
-    const el = document.getElementById(sectionId);
-    if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    // For mobile menu we'll just close and use navigation links
     setMenuOpen(false);
   };
 
@@ -51,13 +47,13 @@ export const MobileMenu = ({ menuOpen, setMenuOpen, setLanguage, language }) => 
         &times;
       </button>
 
-        <a href="#home"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+        <a href="/"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {home} </a>
-        <a href="#about"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+        <a href="/about"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {about} </a>
-        <a href="#projects"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+        <a href="/shop"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {projects} </a>
-        <a href="#find-me"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
+        <a href="/contact"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {contact} </a>
         <select className={`bg-transparent text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"} `}
