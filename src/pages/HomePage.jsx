@@ -5,12 +5,12 @@ import RevealOnScroll from '../components/RevealOnScroll'
 export default function HomePage({language}){
   const texts = {
     pt: {
-      title: 'Flor de Casa',
+      title: 'FloriCult',
       subtitle: 'Arranjos frescos para todas as ocasiões',
       shop: 'Loja'
     },
     en: {
-      title: 'Flor de Casa',
+      title: 'FloriCult',
       subtitle: 'Fresh bouquets for every occasion',
       shop: 'Shop'
     }
@@ -29,7 +29,7 @@ export default function HomePage({language}){
           </div>
 
           <div className="flex items-center justify-center">
-            <FlowerIcon size={180} />
+            {/* <FlowerIcon size={180} /> */}
           </div>
         </div>
       </RevealOnScroll>
