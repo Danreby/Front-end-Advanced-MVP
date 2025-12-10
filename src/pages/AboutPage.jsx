@@ -17,7 +17,7 @@ export default function AboutPage({language}){
             <p className="text-black">{t.body}</p>
           </div>
           <div className="flex items-center justify-center">
-            <FlowerIcon size={180} />
+            {/* <FlowerIcon size={180} /> */}
           </div>
         </div>
       </RevealOnScroll>

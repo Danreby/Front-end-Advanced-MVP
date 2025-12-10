@@ -41,7 +41,7 @@ function App() {
             language={language}
           />
 
-          <main>
+          <main className="pt-20">
             <Routes>
               <Route path="/" element={<HomePage language={language} />} />
               <Route path="/shop" element={<ShopPage language={language} />} />
