@@ -1,6 +1,6 @@
 {
-  "name": "portifolio",
-  "homepage": "https://danreby.github.io/danreby-portifolio/",
+  "name": "frontend-advanced",
+  "homepage": "https://danreby.github.io/floricult/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,6 +19,7 @@
     "matter-js": "^0.20.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-router-dom": "^6.14.1",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
