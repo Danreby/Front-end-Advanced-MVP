@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom'
 
 const sampleProducts = [
-  { id: 'rose', name: 'Buquê de Rosas', price: 'R$ 79,90', img: '' },
-  { id: 'tulip', name: 'Tulipas Sortidas', price: 'R$ 59,90', img: '' },
-  { id: 'orchid', name: 'Orquídea Elegante', price: 'R$ 129,90', img: '' },
+  { id: 'rose', name: 'Buquê de Rosas', price: 'R$ 79,90', img: '/img/rose.jpg' },
+  { id: 'tulip', name: 'Tulipas Sortidas', price: 'R$ 59,90', img: '/img/tulip.jpeg' },
+  { id: 'orchid', name: 'Orquídea Elegante', price: 'R$ 129,90', img: '/img/orquidea.jpg' },
+  { id: 'sunflower', name: 'Mio Girassole', price: 'R$ 89,90', img: '/img/girassol.jpg' },
+  { id: 'lily', name: 'Lirio do Vale', price: 'R$ 69,90', img: '/img/lirio.jpg' },
+  { id: 'daisy', name: 'Margarida', price: 'R$ 99,90', img: '/img/margarida.jpeg' },
+  { id: 'gerbera', name: 'Gerberas', price: 'R$ 139,90', img: '/img/gerberas.jpg' },
+  { id: 'Lavender', name: 'Lavanda', price: 'R$ 49,90', img: '/img/lavanda.jpg' },
+  { id: 'Hydrangea', name: 'Hortênsia', price: 'R$ 149,90', img: '/img/hortensia.jpeg' },
 ]
 
 export default function ShopPage({language}){
@@ -19,10 +25,14 @@ export default function ShopPage({language}){
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {sampleProducts.map(p => (
           <article key={p.id} className="bg-white/60 p-4 rounded-lg shadow-md border border-white/5">
-            <div className="h-40 bg-gradient-to-br from-green-200/5 to-pink-200/5 rounded mb-4 flex items-center justify-center text-gray-500">Imagem</div>
+            {p.img ? (
+              <img src={p.img} alt={p.name} className="h-40 w-full object-cover rounded mb-4" />
+            ) : (
+              <div className="h-40 bg-gradient-to-br from-green-200/5 to-pink-200/5 rounded mb-4 flex items-center justify-center text-gray-500">Imagem</div>
+            )}
             <h3 className="font-semibold mb-2 text-black">{p.name}</h3>
             <div className="text-black font-bold mb-4">{p.price}</div>
-            <button className="px-4 py-2 bg-green-500 hover:bg-emerald-500 rounded text-white">{t.add}</button>
+            {/* <button className="px-4 py-2 bg-green-500 hover:bg-emerald-500 rounded text-white">{t.add}</button> */}
           </article>
         ))}
       </div>
