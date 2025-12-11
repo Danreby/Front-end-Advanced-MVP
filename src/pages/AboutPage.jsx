@@ -129,7 +129,7 @@ export default function AboutPage({ language = "pt" }) {
                   href={t.repoURL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-sm md:text-base font-medium hover:underline"
+                  className="block text-sm md:text-base font-medium hover:underline text-blue-600"
                   aria-label={t.repoUI}
                 >
                   {t.repoUI}
