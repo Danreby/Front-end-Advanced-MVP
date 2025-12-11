@@ -34,7 +34,7 @@ export const NavBar = ({menuOpen, setMenuOpen, setLanguage, language}) => {
     <nav className="fixed top-0 w-full z-40 bg-[#F5EBD8] border-b border-[#E8D8B9] shadow-lg">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
-                <NavLink to="/" onClick={() => setMenuOpen(false)} className="font-mono text-xl font-bold text-black"> Flor<span className="text-yellow-700">.Casa</span> </NavLink>
+                <NavLink to="/" onClick={() => setMenuOpen(false)} className="font-mono text-xl font-bold text-black"> Flori<span className="text-yellow-700">Cult</span> </NavLink>
 
                 <div className="w-7 h-5 relative cursor-pointer z-40 md:hidden" onClick={() => setMenuOpen((prev) => !prev)}>
                     &#9776;

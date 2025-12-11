@@ -1,7 +1,7 @@
 import React from 'react'
 import images from './js/carouselImages'
 import useCarousel from '../hooks/useCarousel'
-import './ImageCarousel.css'
+import './css/ImageCarousel.css'
 
 export default function ImageCarousel({ interval = 2000, className = '' }) {
   const { index, goTo } = useCarousel({ length: images.length, interval })
