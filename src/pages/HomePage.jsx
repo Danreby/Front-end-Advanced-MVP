@@ -1,19 +1,11 @@
-import { Link } from 'react-router-dom'
-import FlowerIcon from '../components/common/FlowerIcon'
+﻿import { Link } from 'react-router-dom'
 import RevealOnScroll from '../components/RevealOnScroll'
+import ImageCarousel from '../components/ImageCarousel'
 
-export default function HomePage({language}){
+export default function HomePage({language}) {
   const texts = {
-    pt: {
-      title: 'FloriCult',
-      subtitle: 'Arranjos frescos para todas as ocasiões',
-      shop: 'Loja'
-    },
-    en: {
-      title: 'FloriCult',
-      subtitle: 'Fresh bouquets for every occasion',
-      shop: 'Shop'
-    }
+    pt: { title: 'FloriCult', subtitle: 'Arranjos frescos para todas as ocasiões', shop: 'Loja' },
+    en: { title: 'FloriCult', subtitle: 'Fresh bouquets for every occasion', shop: 'Shop' }
   }
 
   const t = texts[language] || texts.pt
@@ -29,7 +21,7 @@ export default function HomePage({language}){
           </div>
 
           <div className="flex items-center justify-center">
-            {/* <FlowerIcon size={180} /> */}
+            <ImageCarousel interval={2000} />
           </div>
         </div>
       </RevealOnScroll>
