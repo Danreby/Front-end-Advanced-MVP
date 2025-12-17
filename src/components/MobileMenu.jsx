@@ -1,37 +1,25 @@
-import { useEffect } from "react";
-
 export const MobileMenu = ({ menuOpen, setMenuOpen, setLanguage, language }) => {
-
-  const handleScroll = (event, sectionId) => {
-    // For mobile menu we'll just close and use navigation links
+  const handleLangChange = (e) => {
+    setLanguage(e.target.value);
     setMenuOpen(false);
   };
 
-  const handleLangChange = (e) => {
-            setLanguage(e.target.value)
-            setMenuOpen(false)
-        }
-
-    const texts = {
-        pt: {
-            home: 'Início',
-            about: 'Sobre',
-            projects: 'Projetos',
-            contact: 'Contato',
-            // pt: 'Português',
-            // en: 'Inglês'
-        },
-        en: {
-            home: 'Home',
-            about: 'About',
-            projects: 'Projects',
-            contact: 'Contact',
-            // pt: 'Portuguese',
-            // en: 'English'
-        }
+  const texts = {
+    pt: {
+      home: 'Início',
+      about: 'Sobre',
+      shop: 'Loja',
+      contact: 'Contato',
+    },
+    en: {
+      home: 'Home',
+      about: 'About',
+      shop: 'Shop',
+      contact: 'Contact',
     }
+  };
 
-    const { home, about, projects, contact } = texts[language] || texts.pt
+  const { home, about, shop, contact } = texts[language] || texts.pt;
 
   return (
     <div
@@ -47,21 +35,22 @@ export const MobileMenu = ({ menuOpen, setMenuOpen, setLanguage, language }) => 
         &times;
       </button>
 
-        <a href="/"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
+        <a href="/" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
             ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {home} </a>
-        <a href="/about"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
+        <a href="/about" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
             ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {about} </a>
-        <a href="/shop"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
-            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {projects} </a>
-        <a href="/contact"  onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
+        <a href="/shop" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
+            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {shop} </a>
+        <a href="/contact" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
             ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {contact} </a>
-        <select className={`bg-transparent text-2xl font-semibold text-black my-4 transform transition-transform duration-300
-            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"} `}
-          defaultValue="pt"
+        <select
+          className={`bg-transparent text-2xl font-semibold text-black my-4 transform transition-transform duration-300
+            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+          value={language}
           onChange={handleLangChange}
         >
-          <option className="text-black" value="pt" > Português </option>
-          <option className="text-black" value="en" > English </option>
+          <option value="pt">Português</option>
+          <option value="en">English</option>
         </select>
     </div>
   );
