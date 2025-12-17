@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 export const MobileMenu = ({ menuOpen, setMenuOpen, setLanguage, language }) => {
   const handleLangChange = (e) => {
     setLanguage(e.target.value);
@@ -35,14 +37,14 @@ export const MobileMenu = ({ menuOpen, setMenuOpen, setLanguage, language }) => 
         &times;
       </button>
 
-        <a href="/" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
-            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {home} </a>
-        <a href="/about" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
-            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {about} </a>
-        <a href="/shop" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
-            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {shop} </a>
-        <a href="/contact" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
-            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {contact} </a>
+        <NavLink to="/" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
+            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {home} </NavLink>
+        <NavLink to="/about" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
+            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {about} </NavLink>
+        <NavLink to="/shop" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
+            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {shop} </NavLink>
+        <NavLink to="/contact" onClick={() => setMenuOpen(false)} className={`text-2xl font-semibold text-black my-4 transform transition-transform duration-300
+            ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}> {contact} </NavLink>
         <select
           className={`bg-transparent text-2xl font-semibold text-black my-4 transform transition-transform duration-300
             ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
