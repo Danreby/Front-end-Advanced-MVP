@@ -1,17 +1,18 @@
 import React from "react";
+import Tooltip from "../Tooltip";
 
-export default function SendButton({ state = "idle", label = "Send" }) {
-  const isSending = state === "sending";
+export default function SendButton({ state = "idle", label = "Send", disabled = false }) {
+  const isSending = state === "sending" || disabled;
   const isSuccess = state === "success";
   const isError = state === "error";
 
-  return (
+  const buttonContent = (
     <button
       type="submit"
       disabled={isSending}
       aria-live="polite"
       className={`inline-flex items-center justify-center gap-2
-        ${isSuccess ? "bg-green-500 hover:bg-green-600" : isError ? "bg-red-500 hover:bg-red-600" : "bg-blue-500 hover:bg-blue-600"}
+        ${isSuccess ? "bg-green-500 hover:bg-green-600" : isError ? "bg-red-500 hover:bg-red-600" : "bg-emerald-500 hover:bg-emerald-600"}
         text-white px-6 py-2 rounded font-medium transition-transform transform
         hover:-translate-y-0.5 hover:shadow-lg disabled:opacity-60 disabled:cursor-wait`}
     >
@@ -38,5 +39,11 @@ export default function SendButton({ state = "idle", label = "Send" }) {
         {isSuccess ? (label === "Send" ? "Sent" : "Enviado") : isError ? (label === "Send" ? "Error" : "Erro") : label}
       </span>
     </button>
+  );
+
+  return (
+    <Tooltip text="Clique para enviar sua mensagem" position="top">
+      {buttonContent}
+    </Tooltip>
   );
 }
