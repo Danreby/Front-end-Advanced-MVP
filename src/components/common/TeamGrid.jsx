@@ -1,9 +1,10 @@
 import React from 'react'
+import { getImagePath } from '../../utils/imagePath'
 
 const team = [
-  { name: 'Ana Silva', role: 'Florista Chefe', img: '/img/img_12_1.jpg' },
-  { name: 'Marcos Lima', role: 'Designer de Arranjos', img: '/img/rose.jpg' },
-  { name: 'Beatriz Costa', role: 'Atendimento', img: '/img/lavanda.jpg' },
+  { name: 'Ana Silva', role: 'Florista Chefe', img: getImagePath('img/img_12_1.jpg') },
+  { name: 'Marcos Lima', role: 'Designer de Arranjos', img: getImagePath('img/rose.jpg') },
+  { name: 'Beatriz Costa', role: 'Atendimento', img: getImagePath('img/lavanda.jpg') },
 ]
 
 export default function TeamGrid(){

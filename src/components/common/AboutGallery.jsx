@@ -1,12 +1,13 @@
 import React from 'react'
+import { getImagePath } from '../../utils/imagePath'
 
 const images = [
-  '/img/rose.jpg',
-  '/img/buque_mix_531_1_bd6c52fc9ff2578a52c635db667da679.jpg',
-  '/img/girassol.jpg',
-  '/img/lavanda.jpg',
-  '/img/orquidea.jpg',
-  '/img/hortensia.jpeg'
+  getImagePath('img/rose.jpg'),
+  getImagePath('img/buque_mix_531_1_bd6c52fc9ff2578a52c635db667da679.jpg'),
+  getImagePath('img/girassol.jpg'),
+  getImagePath('img/lavanda.jpg'),
+  getImagePath('img/orquidea.jpg'),
+  getImagePath('img/hortensia.jpeg')
 ]
 
 export default function AboutGallery({ onImageClick }){

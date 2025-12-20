@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import productsData from '../data/products.json'
+import { getImagePath } from '../utils/imagePath'
 
-// Simula uma requisição a servidor lendo um JSON local
 export function useProducts() {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
@@ -15,8 +15,11 @@ export function useProducts() {
     const timer = setTimeout(() => {
       if (cancelled) return
       try {
-        // Leitura do JSON local simulando resposta de API
-        setProducts(productsData)
+        const withResolvedImages = productsData.map(p => ({
+          ...p,
+          img: p.img ? getImagePath(p.img.replace(/^\//, '')) : p.img,
+        }))
+        setProducts(withResolvedImages)
       } catch (err) {
         console.error('Erro ao carregar produtos:', err)
         setError('Erro ao carregar dados de produtos.')
