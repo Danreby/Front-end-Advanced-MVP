@@ -72,7 +72,6 @@ export default function ShopPage({language}){
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-6 text-black">{t.title}</h2>
           
-          {/* Search Bar */}
           <div className="mb-6">
             <input
               type="text"
@@ -84,7 +83,6 @@ export default function ShopPage({language}){
           </div>
         </div>
 
-        {/* Products Grid or Empty State */}
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts.map(p => (
