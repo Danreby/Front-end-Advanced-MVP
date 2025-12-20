@@ -40,7 +40,10 @@ export default function ShopPage({language}){
   )
 
   const handleAddToCart = (product) => {
-    success(`${product.name} adicionado ao carrinho!`)
+    const message = language === 'pt'
+      ? `${product.name} adicionado ao carrinho!`
+      : `${product.name} added to cart!`
+    success(message)
   }
 
   if (loading) {
@@ -86,10 +89,10 @@ export default function ShopPage({language}){
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts.map(p => (
               <Card key={p.id} hover>
-                <CardImage src={p.img} alt={p.name} />
-                <CardHeader title={p.name} />
+                <CardImage src={p.img} alt={language === 'pt' ? p.name : (p.name_en || p.name)} />
+                <CardHeader title={language === 'pt' ? p.name : (p.name_en || p.name)} />
                 <CardFooter>
-                  <span className="font-bold text-emerald-600">{p.price}</span>
+                  <span className="font-bold text-emerald-600">{language === 'pt' ? p.price : (p.price_en || p.price)}</span>
                   <div className="flex gap-2">
                     <Tooltip text={t.seeDetails} position="top">
                       <button

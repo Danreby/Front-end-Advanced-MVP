@@ -2,73 +2,109 @@
   {
     "id": "rose",
     "name": "Buquê de Rosas",
+    "name_en": "Rose Bouquet",
     "price": "R$ 79,90",
-    "img": "/img/images.jfif",
+    "price_en": "$79.90",
+    "img": "img/rose.jpg",
     "description": "Um lindo buquê com rosas vermelhas frescas, perfeito para momentos especiais. Cada rosa é cuidadosamente selecionada para garantir qualidade e beleza.",
-    "details": "Contém 12 rosas vermelhas premium, acompanhadas de folhagem verde. Entrega em embalagem premium com cuidados especiais."
+    "description_en": "A beautiful bouquet with fresh red roses, perfect for special moments. Each rose is carefully selected for quality and beauty.",
+    "details": "Contém 12 rosas vermelhas premium, acompanhadas de folhagem verde. Entrega em embalagem premium com cuidados especiais.",
+    "details_en": "Includes 12 premium red roses with greenery, delivered in premium packaging with special care."
   },
   {
     "id": "tulip",
     "name": "Tulipas Sortidas",
+    "name_en": "Mixed Tulips",
     "price": "R$ 59,90",
-    "img": "/img/images (1).jfif",
+    "price_en": "$59.90",
+    "img": "img/tulip.jpeg",
     "description": "Tulipas coloridas trazem alegria e modernidade. Um arranjo vibrante que ilumina qualquer ambiente.",
-    "details": "Mix de 15 tulipas em cores variadas. Perfeito como presente ou decoração."
+    "description_en": "Colorful tulips bring joy and modern style. A vibrant arrangement that brightens any space.",
+    "details": "Mix de 15 tulipas em cores variadas. Perfeito como presente ou decoração.",
+    "details_en": "Mix of 15 tulips in assorted colors. Perfect as a gift or decoration."
   },
   {
     "id": "orchid",
     "name": "Orquídea Elegante",
+    "name_en": "Elegant Orchid",
     "price": "R$ 129,90",
-    "img": "/img/images.jfif",
+    "price_en": "$129.90",
+    "img": "img/orquidea.jpg",
     "description": "Uma orquídea sofisticada que representa elegância e delicadeza em sua forma mais pura.",
-    "details": "Orquídea premium com floração duradoura. Inclui vasos decorativos e cuidados básicos."
+    "description_en": "A sophisticated orchid that represents elegance and delicacy in its purest form.",
+    "details": "Orquídea premium com floração duradoura. Inclui vasos decorativos e cuidados básicos.",
+    "details_en": "Premium orchid with long-lasting blooms. Includes decorative pot and basic care instructions."
   },
   {
     "id": "sunflower",
     "name": "Mio Girassole",
+    "name_en": "My Sunflower",
     "price": "R$ 89,90",
-    "img": "/img/images (1).jfif",
+    "price_en": "$89.90",
+    "img": "img/girassol.jpg",
     "description": "Girassóis radiantes que trazem a energia do sol para o seu dia.",
-    "details": "8 girassóis frescos com folhagem complementar. Ótimo para decoração ou presente."
+    "description_en": "Radiant sunflowers that bring the sun's energy to your day.",
+    "details": "8 girassóis frescos com folhagem complementar. Ótimo para decoração ou presente.",
+    "details_en": "8 fresh sunflowers with complementary greenery. Great for decoration or as a gift."
   },
   {
     "id": "lily",
     "name": "Lirio do Vale",
+    "name_en": "Valley Lily",
     "price": "R$ 69,90",
-    "img": "/img/images.jfif",
+    "price_en": "$69.90",
+    "img": "img/lirio.jpg",
     "description": "Lírios delicados com aroma envolvente que complementam qualquer ambiente.",
-    "details": "Buquê com 6 lírios brancos. Perfeito para eventos elegantes."
+    "description_en": "Delicate lilies with a captivating scent that complement any setting.",
+    "details": "Buquê com 6 lírios brancos. Perfeito para eventos elegantes.",
+    "details_en": "Bouquet with 6 white lilies. Perfect for elegant events."
   },
   {
     "id": "daisy",
     "name": "Margarida",
+    "name_en": "Daisy",
     "price": "R$ 99,90",
-    "img": "/img/images (1).jfif",
+    "price_en": "$99.90",
+    "img": "img/margarida.jpeg",
     "description": "Margaridas são símbolos de inocência e alegria. Um presente clássico e sempre bem-vindo.",
-    "details": "20 margaridas frescas em cores sortidas. Ideal para qualquer ocasião."
+    "description_en": "Daisies are symbols of innocence and joy. A classic, always-welcome gift.",
+    "details": "20 margaridas frescas em cores sortidas. Ideal para qualquer ocasião.",
+    "details_en": "20 fresh daisies in assorted colors. Ideal for any occasion."
   },
   {
     "id": "gerbera",
     "name": "Gerberas",
+    "name_en": "Gerberas",
     "price": "R$ 139,90",
-    "img": "/img/images.jfif",
+    "price_en": "$139.90",
+    "img": "img/gerberas.jpg",
     "description": "Gerberas vibrantes em cores quentes que iluminam e trazem vida ao ambiente.",
-    "details": "6 gerberas de cor única ou sortidas. Flores de longa duração."
+    "description_en": "Vibrant gerberas in warm colors that brighten and bring life to the room.",
+    "details": "6 gerberas de cor única ou sortidas. Flores de longa duração.",
+    "details_en": "6 gerberas in a single color or assorted. Long-lasting flowers."
   },
   {
     "id": "lavender",
     "name": "Lavanda",
+    "name_en": "Lavender",
     "price": "R$ 49,90",
-    "img": "/img/images (1).jfif",
+    "price_en": "$49.90",
+    "img": "img/lavanda.jpg",
     "description": "Lavanda aromática traz serenidade e um perfume natural encantador.",
-    "details": "Buquê de lavanda seca. Perfeito para aromatizar ambientes."
+    "description_en": "Aromatic lavender brings serenity and a charming natural scent.",
+    "details": "Buquê de lavanda seca. Perfeito para aromatizar ambientes.",
+    "details_en": "Bouquet of dried lavender. Perfect for scenting rooms."
   },
   {
     "id": "hydrangea",
     "name": "Hortênsia",
+    "name_en": "Hydrangea",
     "price": "R$ 149,90",
-    "img": "/img/images.jfif",
+    "price_en": "$149.90",
+    "img": "img/hortensia.jpeg",
     "description": "Hortênsias cheias e volumosas criam arranjos impressionantes e sofisticados.",
-    "details": "3-4 hastes de hortênsia em cores variadas. Flores de longa duração."
+    "description_en": "Full, voluminous hydrangeas create impressive and sophisticated arrangements.",
+    "details": "3-4 hastes de hortênsia em cores variadas. Flores de longa duração.",
+    "details_en": "3–4 hydrangea stems in assorted colors. Long-lasting flowers."
   }
 ]

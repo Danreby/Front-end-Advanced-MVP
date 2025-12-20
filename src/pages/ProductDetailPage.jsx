@@ -65,7 +65,8 @@ export default function ProductDetailPage({ language = 'pt' }) {
       return;
     }
     success(`${t.addedToCart}`);
-    console.log(`Adicionado: ${product.name} x ${quantity}`);
+    const nameForLog = language === 'pt' ? product.name : (product.name_en || product.name);
+    console.log(`Adicionado: ${nameForLog} x ${quantity}`);
   };
 
   if (loading) {
@@ -132,18 +133,30 @@ export default function ProductDetailPage({ language = 'pt' }) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <Card hover={false}>
-            <CardImage src={product.img} alt={product.name} height="h-80" />
+            <CardImage
+              src={product.img}
+              alt={language === 'pt' ? product.name : (product.name_en || product.name)}
+              height="h-80"
+            />
           </Card>
 
           <div>
-            <CardHeader title={product.name} />
+            <CardHeader
+              title={language === 'pt' ? product.name : (product.name_en || product.name)}
+            />
 
             <div className="mb-6">
-              <p className="text-2xl font-bold text-emerald-600 mb-2">{product.price}</p>
-              <p className="text-gray-600 mb-4">{product.description}</p>
+              <p className="text-2xl font-bold text-emerald-600 mb-2">
+                {language === 'pt' ? product.price : (product.price_en || product.price)}
+              </p>
+              <p className="text-gray-600 mb-4">
+                {language === 'pt' ? product.description : (product.description_en || product.description)}
+              </p>
 
               <div className="bg-emerald-50 p-4 rounded-lg border border-emerald-200 mb-6">
-                <p className="text-sm text-gray-700">{product.details}</p>
+                <p className="text-sm text-gray-700">
+                  {language === 'pt' ? product.details : (product.details_en || product.details)}
+                </p>
               </div>
             </div>
 
@@ -194,11 +207,13 @@ export default function ProductDetailPage({ language = 'pt' }) {
               {recommendedProducts.map((p) => (
                 <Card key={p.id} hover className="cursor-pointer" onClick={() => navigate(`/product/${p.id}`)}>
                   <CardImage src={p.img} alt={p.name} />
-                  <CardHeader title={p.name} />
+                  <CardHeader title={language === 'pt' ? p.name : (p.name_en || p.name)} />
                   <CardFooter>
-                    <span className="font-bold text-emerald-600">{p.price}</span>
+                    <span className="font-bold text-emerald-600">
+                      {language === 'pt' ? p.price : (p.price_en || p.price)}
+                    </span>
                     <button className="text-emerald-600 hover:text-emerald-700 font-semibold text-sm">
-                      Ver →
+                      {language === 'pt' ? 'Ver →' : 'View →'}
                     </button>
                   </CardFooter>
                 </Card>
