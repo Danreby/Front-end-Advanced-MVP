@@ -6,23 +6,12 @@ import { Card, CardImage, CardHeader, CardFooter } from '../components/common/Ca
 import { EmptyState } from '../components/common/EmptyState'
 import Tooltip from '../components/common/Tooltip'
 import { LoadingSpinner } from '../components/common/LoadingSpinner'
-
-const sampleProducts = [
-  { id: 'rose', name: 'Buquê de Rosas', price: 'R$ 79,90', img: '/img/images.jfif' },
-  { id: 'tulip', name: 'Tulipas Sortidas', price: 'R$ 59,90', img: '/img/images (1).jfif' },
-  { id: 'orchid', name: 'Orquídea Elegante', price: 'R$ 129,90', img: '/img/images.jfif' },
-  { id: 'sunflower', name: 'Mio Girassole', price: 'R$ 89,90', img: '/img/images (1).jfif' },
-  { id: 'lily', name: 'Lirio do Vale', price: 'R$ 69,90', img: '/img/images.jfif' },
-  { id: 'daisy', name: 'Margarida', price: 'R$ 99,90', img: '/img/images (1).jfif' },
-  { id: 'gerbera', name: 'Gerberas', price: 'R$ 139,90', img: '/img/images.jfif' },
-  { id: 'lavender', name: 'Lavanda', price: 'R$ 49,90', img: '/img/images (1).jfif' },
-  { id: 'hydrangea', name: 'Hortênsia', price: 'R$ 149,90', img: '/img/images.jfif' },
-]
+import { useProducts } from '../hooks/useProducts'
 
 export default function ShopPage({language}){
   const navigate = useNavigate()
   const { success } = useToast()
-  const [loading, setLoading] = useState(true)
+  const { products, loading, error } = useProducts()
   const [searchTerm, setSearchTerm] = useState('')
 
   const texts = useMemo(() => ({
@@ -46,13 +35,7 @@ export default function ShopPage({language}){
 
   const t = texts[language] || texts.pt
 
-  React.useEffect(() => {
-    setLoading(true)
-    const timer = setTimeout(() => setLoading(false), 800)
-    return () => clearTimeout(timer)
-  }, [])
-
-  const filteredProducts = sampleProducts.filter(p => 
+  const filteredProducts = products.filter(p => 
     p.name.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
@@ -64,6 +47,18 @@ export default function ShopPage({language}){
     return (
       <section className="min-h-[60vh] p-6 max-w-6xl mx-auto flex items-center justify-center">
         <LoadingSpinner size="lg" text={language === 'pt' ? 'Carregando produtos...' : 'Loading products...'} />
+      </section>
+    )
+  }
+
+  if (error) {
+    return (
+      <section className="min-h-[60vh] p-6 max-w-6xl mx-auto flex items-center justify-center">
+        <EmptyState
+          icon="⚠️"
+          title={language === 'pt' ? 'Erro ao carregar dados' : 'Error loading data'}
+          description={language === 'pt' ? 'Tente recarregar a página ou volte mais tarde.' : 'Try reloading the page or come back later.'}
+        />
       </section>
     )
   }

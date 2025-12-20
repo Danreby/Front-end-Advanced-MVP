@@ -1,0 +1,74 @@
+[
+  {
+    "id": "rose",
+    "name": "Buquê de Rosas",
+    "price": "R$ 79,90",
+    "img": "/img/images.jfif",
+    "description": "Um lindo buquê com rosas vermelhas frescas, perfeito para momentos especiais. Cada rosa é cuidadosamente selecionada para garantir qualidade e beleza.",
+    "details": "Contém 12 rosas vermelhas premium, acompanhadas de folhagem verde. Entrega em embalagem premium com cuidados especiais."
+  },
+  {
+    "id": "tulip",
+    "name": "Tulipas Sortidas",
+    "price": "R$ 59,90",
+    "img": "/img/images (1).jfif",
+    "description": "Tulipas coloridas trazem alegria e modernidade. Um arranjo vibrante que ilumina qualquer ambiente.",
+    "details": "Mix de 15 tulipas em cores variadas. Perfeito como presente ou decoração."
+  },
+  {
+    "id": "orchid",
+    "name": "Orquídea Elegante",
+    "price": "R$ 129,90",
+    "img": "/img/images.jfif",
+    "description": "Uma orquídea sofisticada que representa elegância e delicadeza em sua forma mais pura.",
+    "details": "Orquídea premium com floração duradoura. Inclui vasos decorativos e cuidados básicos."
+  },
+  {
+    "id": "sunflower",
+    "name": "Mio Girassole",
+    "price": "R$ 89,90",
+    "img": "/img/images (1).jfif",
+    "description": "Girassóis radiantes que trazem a energia do sol para o seu dia.",
+    "details": "8 girassóis frescos com folhagem complementar. Ótimo para decoração ou presente."
+  },
+  {
+    "id": "lily",
+    "name": "Lirio do Vale",
+    "price": "R$ 69,90",
+    "img": "/img/images.jfif",
+    "description": "Lírios delicados com aroma envolvente que complementam qualquer ambiente.",
+    "details": "Buquê com 6 lírios brancos. Perfeito para eventos elegantes."
+  },
+  {
+    "id": "daisy",
+    "name": "Margarida",
+    "price": "R$ 99,90",
+    "img": "/img/images (1).jfif",
+    "description": "Margaridas são símbolos de inocência e alegria. Um presente clássico e sempre bem-vindo.",
+    "details": "20 margaridas frescas em cores sortidas. Ideal para qualquer ocasião."
+  },
+  {
+    "id": "gerbera",
+    "name": "Gerberas",
+    "price": "R$ 139,90",
+    "img": "/img/images.jfif",
+    "description": "Gerberas vibrantes em cores quentes que iluminam e trazem vida ao ambiente.",
+    "details": "6 gerberas de cor única ou sortidas. Flores de longa duração."
+  },
+  {
+    "id": "lavender",
+    "name": "Lavanda",
+    "price": "R$ 49,90",
+    "img": "/img/images (1).jfif",
+    "description": "Lavanda aromática traz serenidade e um perfume natural encantador.",
+    "details": "Buquê de lavanda seca. Perfeito para aromatizar ambientes."
+  },
+  {
+    "id": "hydrangea",
+    "name": "Hortênsia",
+    "price": "R$ 149,90",
+    "img": "/img/images.jfif",
+    "description": "Hortênsias cheias e volumosas criam arranjos impressionantes e sofisticados.",
+    "details": "3-4 hastes de hortênsia em cores variadas. Flores de longa duração."
+  }
+]
